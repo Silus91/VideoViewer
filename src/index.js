@@ -8,15 +8,13 @@ import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyAnmcprXZFX_QOsVLRaCPQ51tIXsZpJlQI';
 
 class App extends Component {
-    constructor (props) {
-    super(props);
-
-    this.state = {videos: [],
-    selectedVideo: null
- };
-
-   this.videoSearch('sword');
-}
+  constructor (props) {
+  super(props);
+  this.state = {videos: [],
+  selectedVideo: null
+    };
+  this.videoSearch('sword');
+  }
 
 videoSearch(term) {
      YTSearch({key: API_KEY, term: term}, (videos) => {
