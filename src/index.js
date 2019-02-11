@@ -16,13 +16,13 @@ class App extends Component {
   this.videoSearch('sword');
   }
 
-videoSearch(term) {
-     YTSearch({key: API_KEY, term: term}, (videos) => {
-    this.setState({ 
+  videoSearch(term) {
+    YTSearch({key: API_KEY, term: term}, (videos) => {
+      this.setState({ 
         videos:videos,
-    selectedVideo: videos[0] });
+      selectedVideo: videos[0] });
     });
-    };
+  };
 
  
 render () {
