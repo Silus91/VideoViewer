@@ -24,7 +24,6 @@ class App extends Component {
     });
   };
 
- 
   render () {
   const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 3000);
     return (
@@ -38,6 +37,5 @@ class App extends Component {
     );
   }
 }
-
 
 ReactDOM.render(<App />, document.querySelector('.container'));
